@@ -78,6 +78,62 @@ begin
 		end case;
 	end if;
 end process proceso;
+			 _______ rango de valores m to n
+-- Sentencia FOR LOOP	|
+			v
+for VariableDeBucle in rango loop
+	-- Codigo a repetirse
+end loop;
+
+Ejemplo: For - Loop
+
+proceso: process (A, B)
+begin
+	for i in 0 to 2 loop
+		Y(i) <= A(2 - i) and B(i);
+	end loop;
+end process proceso;
+
+
+NOTA: LA SENTENCIA EXIT; HACE QUE SE SALGA DEL BUCLE -> BREAK;
+
+Sentencia: Wait -> solo con propósitos de simulación no se puede sintetizar 
+-> Sirve para pausar la simulación por un periodo determinado de tiempo 
+-> Sirve para pausar la simulación hasta que ocurra un determinado evento
+
+Sintaxis: 
+-> wait <- espera de manera indefinida 
+-> wait for xtime <- espera por un tiempo x determinado
+
+Ejemplo:
+
+-- Acá generamos una señal de reloj de un periodo de 20ns 
+-- Cabe precisar que solo podemos usar esa señal de reloj
+-- con fines de simulación o testbenchs ya que la sentencia 
+-- wait no puede ser sintetizada OJO :D
+
+clock_gen: process 
+begin
+	clock <= '0';
+	wait for 10ns;
+	clock <= '1';
+	wait for 10ns;
+end process clock_gen;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
