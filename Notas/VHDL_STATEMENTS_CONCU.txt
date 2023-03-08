@@ -1,0 +1,97 @@
+Declaraciones concurrentes: Solo pueden ser usadas dentro del bloque de architecture
+Declaraciones secuenciales: Solo pueden ser usadas dentro del bloque de process
+
+Declaraciones Concurrentes:
+ - Bloques de procesos
+ - Instanciado de componentes 
+ - Asignación concurrente de señal ( A <= B)
+ - Asignación condicional de señal (when - else)
+ - Asignación de selección de señal (with - select)
+ - Generate
+
+-- When - else 
+
+architecture RTL of entidad is
+begin
+   A <= "1000" when B = "00" else
+        "0100" when B = "01" else
+        "0010" when B = "10" else
+	"0001";
+end entity entidad;
+
+-- With - Select
+
+architecture RTL of entidad is
+begin
+   with B select
+	A <= "1000" when "00",
+	     "0100" when "01",
+             "0010" when "10",
+             "0001" when others;
+end entity entidad;
+
+-- Generate Statement -> Sirve para replicar hardware (for - generate)
+                      -> Sirve para condicionar hardware (if - generate)
+
+- For Generate sintaxis
+	nombre: for parametro in rango generate
+	  -- Hardware a generar 
+	end generate;
+
+
+Ejemplo 1: for - generate
+
+signal in_signal: std_logic_vector (15 downto 0);
+signal even_bits: std_logic_vector (7 downto 0);
+signal odd_bits: std_logic_vector (7 downto 0);
+
+Ejemplo_1: for counter in 0 to 7 generate 
+	even_bits(counter) <= in_signal(2*counter);
+	odd_bits(counter) <= in_signal_(2*counter + 1);	
+end generate;
+
+-- If - generate statement
+
+-> genera un hardware solo si se cumple una determinada condición durante la compilación
+-> La condicion a ser evaluada debe ser una constante 
+-> No se puede usar señales o variales para la condición
+-> Puede ser probada para multiples condiciones.
+
+-- Sintaxis
+
+Nombre: if condicion1 generate 
+	-- Hardware a generar si se cumple la primera condicion
+elsif condicion2 generate 
+	-- Hardware a generar si se cumple la segunda condicion
+else generate 
+	-- Hardware a generar en caso no se cumplan las condiciones anteriores
+end generate;
+
+-- Ejemplo_1: if - generate 
+
+Ejemplo_1: if ASSIGNADO_A_Y generate 
+	Y <= X;
+else generate
+	Z <= X;
+end generate;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

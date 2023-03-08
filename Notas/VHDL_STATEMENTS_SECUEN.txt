@@ -1,0 +1,92 @@
+Declaraciones secuenciales en VHDL -> Sequential Statements 
+-> Solo pueden ser usados dentro de los bloques process
+-> Asignaciones secuenciales
+-> Declaraciones IF - ELSIF - ELSE 
+-> Declaraciones CASE
+-> Bucles for 
+-> Sentencias Wait
+
+OJO: SOLO SE REALIZAN DENTRO DE BLOQUES PROCESS
+
+--- Asignaciones secuenciales 
+	A <= B;
+
+-- Sentencias secuenciales IF - ELSE
+
+	if cond1 then <- tiene la más alta prioridad
+	-- Code 1a
+	elsif cond2 then
+	-- Code 2
+	elsif cond3 then
+	-- Code 3
+	else 
+	-- Code 4
+	end if;
+	
+Ejemplo: Sentencia IF - ELSE 
+	
+	mi_proceso: process (sel, A, B, C, D) <- Lista de sensibilidad
+	begin
+		if sel = "00" then
+			out <= A;
+		elsif sel = "10" then
+			out <= B;
+		elsif sel = "01" then
+			out <= C;
+		else 
+			out <= D;
+		end if;
+	end process mi_proceso;	
+
+-- Sentencias secuenciales  CASE
+		   _______ Expresion a analizar
+		  |
+		  v
+	case (expresion) is 
+		when opcion1 =>
+			-- Codigo 1
+		when opcion2 => 
+			-- Codigo 2
+		when others =>
+			-- codigo 3
+	end case;
+
+Ejemplo: Sentencia CASE
+	proceso: process (sel, A, B, C, D)
+	begin
+		case (sel) is
+			when "00" => out <= A;
+			when "01" => out <= B;
+			when "10" => out <= C;
+			when others => out <= D;
+		end case;
+	end process proceso;
+
+
+-- EJEMPLO COMBINADO DE SENTENCIA IF - CASE
+
+proceso: process (Reset, clock)
+begin 
+	if reset = '1' then
+		out <= '0';
+	elsif rising_edge (clock) then
+		case (sel) is
+			when "00" => out <= A;
+			when "01" => out <= B;
+			when "10" => out <= C;
+			when others => out <= D;
+		end case;
+	end if;
+end process proceso;
+
+
+
+
+
+
+
+
+
+
+
+

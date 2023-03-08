@@ -1,0 +1,43 @@
+-- Librerias 
+
+library ieee;
+
+use ieee.std_logic_1164.all;
+
+-- Entidad
+
+entity state_machine is 
+port
+	(
+	-- Entradas 
+		state_mach_clock: in std_logic;
+		state_mach_switcs: in std_logic_vector(3 downto 1);
+	-- Salidas     
+		state_mach_outs: out std_logic_vector (3 downto 1)
+	);
+end entity state_machine;
+
+-- Arquitectura
+
+architecture func_state_machine of state_machine is 
+
+type state_mach_data_type (STATE1, STATE2, STATE3);
+signal state_mach_var : STAte_mach_data_type;
+
+begin
+	state_machine_process: process (state_mach_clock)
+	begin
+		if rising_edge (state_mach_clock) then
+			case state_mach_var is 
+				when STATE1 => -- primer estado
+					state_mach_outs <= "110"; -- led1 on
+				when STATE2 => -- segundo estado
+					state_mach_outs <= "101"; -- led2 on
+				when STATE3 => -- tercer estado
+					state_mach_outs <= "011"; -- led3 on
+				when others => -- estado default
+					state_mach_var <= STATE1;
+			end case;
+		end if;
+	end process state_machine_process;
+end architecture func_state_machine;

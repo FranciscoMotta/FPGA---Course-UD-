@@ -1,0 +1,6 @@
+
+State Machine - |state_machine|state_mach_var
+Name state_mach_var.STATE3 state_mach_var.STATE2 state_mach_var.STATE1 
+state_mach_var.STATE1 0 0 0 
+state_mach_var.STATE2 0 1 1 
+state_mach_var.STATE3 1 0 1 

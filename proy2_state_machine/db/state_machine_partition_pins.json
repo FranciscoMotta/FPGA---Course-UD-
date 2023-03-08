@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "state_mach_outs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "state_mach_outs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "state_mach_outs[3]",
+					"strict" : false
+				},
+				{
+					"name" : "STAte_mach_areset",
+					"strict" : false
+				},
+				{
+					"name" : "state_mach_switchs[3]",
+					"strict" : false
+				},
+				{
+					"name" : "state_mach_switchs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "state_mach_switchs[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
