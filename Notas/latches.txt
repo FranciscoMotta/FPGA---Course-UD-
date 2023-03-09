@@ -1,0 +1,4 @@
+-- LATCHES Pueden generar problemas en la implementación
+-> Solo se puede generar en procesos combinacionales 
+-> Los Latches son creados cuando no se está definido el estado de la salida a lo largo del proceso
+-> Tratar de evitar los latches

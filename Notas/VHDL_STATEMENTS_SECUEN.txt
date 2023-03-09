@@ -104,6 +104,8 @@ Sentencia: Wait -> solo con propósitos de simulación no se puede sintetizar
 Sintaxis: 
 -> wait <- espera de manera indefinida 
 -> wait for xtime <- espera por un tiempo x determinado
+-> wait on X <- espera hasta un evento ocurrido en A
+-> wait until A = '0' <- espera mientras a se encuentre en un nivel determinado
 
 Ejemplo:
 
@@ -120,7 +122,14 @@ begin
 	wait for 10ns;
 end process clock_gen;
 
+Ejemplo 2:
 
+test: process
+begin
+	Y <= X;
+	wait until A = '0';
+	Z <= Y;
+end process;
 
 
 
