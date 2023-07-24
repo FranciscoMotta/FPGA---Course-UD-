@@ -1,0 +1,6 @@
+El VHDL es muy estricto con los tipos de datos. 
+    - VHDL es un lenguaje fuertemente tipado.
+No se puede usar diferentes tipos de datos en la misma expresión
+Cuando se realizar una asignación de señal, el tipo de dato de la mano derecha
+debe ser igual al tipo de dato de la mano izquierda de la expresión.
+

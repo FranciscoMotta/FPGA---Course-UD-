@@ -1,0 +1,2 @@
+Generacion de señales de Modulacion de ancho de pulso (PWM)
+-- El valor máximo del contaror define el periodo del PWM

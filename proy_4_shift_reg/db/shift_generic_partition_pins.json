@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "data_outp[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_outp[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_outp[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_outp[3]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_ena",
+					"strict" : false
+				},
+				{
+					"name" : "clock_sig",
+					"strict" : false
+				},
+				{
+					"name" : "reset_sig",
+					"strict" : false
+				},
+				{
+					"name" : "data_inpt",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

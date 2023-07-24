@@ -1,0 +1,24 @@
+|serialiser
+serialiser_clock => data_register[0].CLK
+serialiser_clock => data_register[1].CLK
+serialiser_clock => data_register[2].CLK
+serialiser_clock => data_register[3].CLK
+serialiser_reset => data_register[0].ACLR
+serialiser_reset => data_register[1].ACLR
+serialiser_reset => data_register[2].ACLR
+serialiser_reset => data_register[3].ACLR
+serialiser_shfen => data_register.OUTPUTSELECT
+serialiser_shfen => data_register.OUTPUTSELECT
+serialiser_shfen => data_register.OUTPUTSELECT
+serialiser_shfen => data_register.OUTPUTSELECT
+serialiser_load => data_register.OUTPUTSELECT
+serialiser_load => data_register.OUTPUTSELECT
+serialiser_load => data_register.OUTPUTSELECT
+serialiser_load => data_register.OUTPUTSELECT
+serialiser_Data[0] => data_register.DATAA
+serialiser_Data[1] => data_register.DATAA
+serialiser_Data[2] => data_register.DATAA
+serialiser_Data[3] => data_register.DATAA
+serialiser_dout <= data_register[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

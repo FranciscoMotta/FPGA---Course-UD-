@@ -1,0 +1,65 @@
+Paquetes:
+Son grupos de declaraciones para ser compartidos entre varios diseños. 
+Un paquete puede contener los siguientes elementos:
+- Señales y constantes
+- Tipos de datos y subtipos 
+- Funciones y procedimientos 
+- Componentes 
+- Archivos 
+- Atributos 
+
+Tipos de paquetes:
+. std_logic_1164 -> para usar std_logic y std_logic_vector 
+
+Definicion de paquetes 
+
+el archivo debe ser guardado como .vhd para ser usado
+
+package Mi_paquete is 
+	type tlighttype is (RED, AMBER, GREEN);
+end package Mi_paquete;
+
+uso de paquetes:
+
+Dentro del archivo .vhd que se está diseñando
+
+use work.nombre_del_paquete.all;
+
+architecture arqui1 of module1 is 
+
+signal trafficls : tlighttype; -- usamos los tipos de datos definidos		
+
+begin
+.
+.
+.
+
+end architecture arqui1;
+
+
+Librerias:
+
+Esta contiene unidades de diseño compilados.
+El compilador compila los modulos de diseño dentr de una forma intermedia y los almacena en una librería. 
+De manera predeterminada, la forma intermedia son guardadas en una librería y tu en realidad trabajas en ellas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

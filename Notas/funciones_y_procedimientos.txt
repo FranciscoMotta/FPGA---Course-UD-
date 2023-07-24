@@ -1,0 +1,81 @@
+Notas de funciones y procedimientos:
+-- FUNCIONES
+
+Son parecidas a las funciones de C o de Cpp
+Son usadas para realizar funciones repetitivas o tareas.
+Son llamadas en el código VHDl para desarrollar tareas
+No pueden utilizar registros, solo compuertas lógicas.
+Pueden ser declaradas en arquitecturas, procesos o paquetes.
+
+- Restricciones.
+Suelen ser usadas para desarrollar algoritmos.
+Pueden no tener argumentos de entrada o tener varios.
+Las funciones no pueden cambiar los valores de entrada.
+Deben retornar un valor de salida.
+... No pueden retornar un valor void (vacio) u omitir el valor de retorno.
+... No pueden contener sentencias wait en sus distintas proposiciones. 
+
+- Definicion de funciones.
+
+function nombre_de_la_funcion (parametros de entrada)
+
+return ReturnType is
+	-- Constantes o declaracion de variables
+begin
+	-- Acá va el código que desarrolla la funcion
+	return algun_valor;
+end;
+					  ----- Tipo de dato
+EJEMPLO: Funciones                        | 
+					  v
+function increment_simple (input_num : integer)
+
+return integer is 
+	variable temporal: integer;
+begin
+	temporal := input_num + 1;
+	return temporal; -- Valor de retorno
+end;
+
+- Uso
+
+C <= increment_simple(4);
+
+-- PROCEDIMIENTOS
+
+Son parecidas a la funciones
+No retornan valores.
+Sus parámetros pueden ser in, out o inout;
+. In - Usado para pasar parámetros dentro del procedimiento (procedure)
+. Out - Usado para pasar parámtros fuera del procedimieto, pueden ser varios.
+. InOut, hace lo de arriba juntos 
+
+- Definición de funciones.
+procedure nombre_de_procedimiento (parametros) is
+ -- Declaraciones de variables o de constantes
+begin
+ -- Aca escribimos el código de desarrollo del procedimiento
+end;
+
+EJEMPLO: Procedure
+
+procedure Full_Adder 
+(
+	signal A,B,C :  in std_logic;
+	signal sum, carry: out std_logic
+)
+is
+begin 
+	sum <= A xor B xor C; -- Suma
+	carry <= (A and B) or (A and C) or (C and B); -- Acarreo
+end;
+
+- Uso
+
+Full_Adder(P,Q,R,SO,CO);
+
+
+
+
+
+

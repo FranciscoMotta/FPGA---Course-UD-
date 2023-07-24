@@ -1,0 +1,16 @@
+|multiplex
+entradas[0] => sal_prev.DATAB
+entradas[1] => sal_prev.DATAB
+entradas[2] => sal_prev.DATAB
+entradas[3] => sal_prev.DATAA
+selector[0] => Equal0.IN3
+selector[0] => Equal1.IN3
+selector[0] => LessThan0.IN4
+selector[1] => Equal0.IN2
+selector[1] => Equal1.IN2
+selector[1] => LessThan0.IN3
+clock_in => sal_ffd.CLK
+reset_in => sal_ffd.ACLR
+salida_mul <= sal_ffd.DB_MAX_OUTPUT_PORT_TYPE
+
+

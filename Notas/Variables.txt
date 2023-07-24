@@ -1,0 +1,42 @@
+Variables:
+Almacena un valor intermedio entre los procesos, funciones o procedimienos.
+No pueden ser usados fuera de procesos, funciones o procedimientos
+La declaración de una variable es simitar a la declaración de una señal.
+Como en el caso de las señales, el valor inicial de estas es ignorada en la síntesis. 
+
+
+Declaración de la variable:
+
+test_process: process (Reset, clock) 
+	variable X: integer; -- Declaracion <- No tiene valor inicial
+begin
+	if Reset = '1' then
+		X := 0; -- Asignación de variable
+		Y <= 0;
+	elsif rising_edge(clock) then
+		X := 7; -- Toma el valor inmediatamente
+		X := X + 1; -- X se incrementa en una unidad
+		-- Esto no se podría hacer con una señal
+		-- Ya que solo se ejecutaría la última asignación
+	end if;
+end process test_process;
+
+Ejemplo: Uso de variables 
+
+Tenemos la siguiente matriz: A = [15, 7,3, 57, 49, 8,6, 27]
+
+test_process: process (Reset, Clock) 
+
+variable temporal: integer;
+
+begin
+	if Reset = '1' then
+		temporal := 0;
+		Sum <= 0; -- Suma es una señal
+	elsif rising_edge(Clock) then	
+		for index in 0 to 7 loop
+			temporal := temporal + A(index);
+		end loop;
+	Sum <= temporal;
+	end if;
+end process test_process;

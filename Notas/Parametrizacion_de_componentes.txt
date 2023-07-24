@@ -1,0 +1,28 @@
+Podemos usar tipos de datos genéticos para modificar el comportamiento interno de los compontes 
+que usemos dentro de nuestros diseños.
+
+Ejemplo: Genericos 
+
+entity adder is 
+	generic
+	(
+	  N : integer := 8
+	);
+	
+	port
+	(
+	  A : in unsigned(N - 1 downto 0);
+	  B : in unsigned(N - 1 downto 0);
+	  C : in unsigned(N - 1 downto 0)
+	);
+end entity adder;
+
+architecture rtl of adder is 
+begin
+	C <= A + B;
+end architecture rtl;
+
+Eso nos ayuda a tener un mismo componente dentro de nuestro diseño realizando
+distintas funciones con alcances diferentes, ya que podemos tener un sumador como
+componente que realiza sumas de 3 bits y otro de 20 
+Solo cambiando los parámetros genéricos del mismo.

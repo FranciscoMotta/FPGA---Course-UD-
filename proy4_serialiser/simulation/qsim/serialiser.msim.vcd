@@ -1,0 +1,558 @@
+$comment
+	File created using the following command:
+		vcd file serialiser.msim.vcd -direction
+$end
+$date
+	Mon Jul 24 18:31:42 2023
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module serialiser_vhd_vec_tst $end
+$var wire 1 ! serialiser_clock $end
+$var wire 1 " serialiser_Data [3] $end
+$var wire 1 # serialiser_Data [2] $end
+$var wire 1 $ serialiser_Data [1] $end
+$var wire 1 % serialiser_Data [0] $end
+$var wire 1 & serialiser_dout $end
+$var wire 1 ' serialiser_load $end
+$var wire 1 ( serialiser_reset $end
+$var wire 1 ) serialiser_shfen $end
+
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var wire 1 - devoe $end
+$var wire 1 . devclrn $end
+$var wire 1 / devpor $end
+$var wire 1 0 ww_devoe $end
+$var wire 1 1 ww_devclrn $end
+$var wire 1 2 ww_devpor $end
+$var wire 1 3 ww_serialiser_clock $end
+$var wire 1 4 ww_serialiser_reset $end
+$var wire 1 5 ww_serialiser_shfen $end
+$var wire 1 6 ww_serialiser_load $end
+$var wire 1 7 ww_serialiser_Data [3] $end
+$var wire 1 8 ww_serialiser_Data [2] $end
+$var wire 1 9 ww_serialiser_Data [1] $end
+$var wire 1 : ww_serialiser_Data [0] $end
+$var wire 1 ; ww_serialiser_dout $end
+$var wire 1 < \serialiser_dout~output_o\ $end
+$var wire 1 = \serialiser_clock~input_o\ $end
+$var wire 1 > \serialiser_shfen~input_o\ $end
+$var wire 1 ? \serialiser_Data[3]~input_o\ $end
+$var wire 1 @ \data_register~3_combout\ $end
+$var wire 1 A \serialiser_reset~input_o\ $end
+$var wire 1 B \serialiser_load~input_o\ $end
+$var wire 1 C \serialiser_Data[2]~input_o\ $end
+$var wire 1 D \data_register~2_combout\ $end
+$var wire 1 E \serialiser_Data[1]~input_o\ $end
+$var wire 1 F \data_register~1_combout\ $end
+$var wire 1 G \serialiser_Data[0]~input_o\ $end
+$var wire 1 H \data_register~0_combout\ $end
+$var wire 1 I data_register [3] $end
+$var wire 1 J data_register [2] $end
+$var wire 1 K data_register [1] $end
+$var wire 1 L data_register [0] $end
+$var wire 1 M \ALT_INV_serialiser_shfen~input_o\ $end
+$var wire 1 N ALT_INV_data_register [3] $end
+$var wire 1 O ALT_INV_data_register [2] $end
+$var wire 1 P ALT_INV_data_register [1] $end
+$var wire 1 Q \ALT_INV_serialiser_Data[0]~input_o\ $end
+$var wire 1 R \ALT_INV_serialiser_reset~input_o\ $end
+$var wire 1 S \ALT_INV_serialiser_Data[1]~input_o\ $end
+$var wire 1 T \ALT_INV_serialiser_Data[2]~input_o\ $end
+$var wire 1 U \ALT_INV_serialiser_Data[3]~input_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0&
+0'
+1(
+0)
+0*
+1+
+x,
+1-
+1.
+1/
+10
+11
+12
+03
+14
+05
+06
+0;
+0<
+0=
+0>
+1?
+1@
+1A
+0B
+0C
+0D
+1E
+1F
+0G
+0H
+1M
+1Q
+0R
+0S
+1T
+0U
+1"
+0#
+1$
+0%
+17
+08
+19
+0:
+0I
+0J
+0K
+0L
+1N
+1O
+1P
+$end
+#10000
+1!
+13
+1=
+#20000
+0!
+03
+0=
+#30000
+1!
+13
+1=
+#40000
+0!
+03
+0=
+#50000
+1!
+1'
+0(
+13
+16
+04
+0A
+1B
+1=
+1R
+#60000
+0!
+03
+0=
+#70000
+1!
+13
+1=
+1I
+1K
+0P
+0N
+#80000
+0!
+03
+0=
+#90000
+1!
+13
+1=
+#100000
+0!
+03
+0=
+#110000
+1!
+0"
+0$
+13
+09
+07
+0?
+0E
+1=
+1S
+1U
+0@
+0F
+#120000
+0!
+03
+0=
+#130000
+1!
+13
+1=
+0I
+0K
+1P
+1N
+#140000
+0!
+0'
+03
+06
+0B
+0=
+#150000
+1!
+1)
+13
+15
+1>
+1=
+0M
+#160000
+0!
+03
+0=
+#170000
+1!
+13
+1=
+#180000
+0!
+03
+0=
+#190000
+1!
+13
+1=
+#200000
+0!
+03
+0=
+#210000
+1!
+13
+1=
+#220000
+0!
+03
+0=
+#230000
+1!
+13
+1=
+#240000
+0!
+03
+0=
+#250000
+1!
+13
+1=
+#260000
+0!
+03
+0=
+#270000
+1!
+13
+1=
+#280000
+0!
+03
+0=
+#290000
+1!
+13
+1=
+#300000
+0!
+03
+0=
+#310000
+1!
+13
+1=
+#320000
+0!
+03
+0=
+#330000
+1!
+13
+1=
+#340000
+0!
+03
+0=
+#350000
+1!
+13
+1=
+#360000
+0!
+03
+0=
+#370000
+1!
+13
+1=
+#380000
+0!
+03
+0=
+#390000
+1!
+13
+1=
+#400000
+0!
+03
+0=
+#410000
+1!
+13
+1=
+#420000
+0!
+03
+0=
+#430000
+1!
+13
+1=
+#440000
+0!
+03
+0=
+#450000
+1!
+13
+1=
+#460000
+0!
+03
+0=
+#470000
+1!
+13
+1=
+#480000
+0!
+03
+0=
+#490000
+1!
+13
+1=
+#500000
+0!
+03
+0=
+#510000
+1!
+13
+1=
+#520000
+0!
+03
+0=
+#530000
+1!
+13
+1=
+#540000
+0!
+03
+0=
+#550000
+1!
+13
+1=
+#560000
+0!
+03
+0=
+#570000
+1!
+13
+1=
+#580000
+0!
+03
+0=
+#590000
+1!
+13
+1=
+#600000
+0!
+03
+0=
+#610000
+1!
+13
+1=
+#620000
+0!
+03
+0=
+#630000
+1!
+13
+1=
+#640000
+0!
+03
+0=
+#650000
+1!
+13
+1=
+#660000
+0!
+03
+0=
+#670000
+1!
+13
+1=
+#680000
+0!
+03
+0=
+#690000
+1!
+13
+1=
+#700000
+0!
+03
+0=
+#710000
+1!
+13
+1=
+#720000
+0!
+03
+0=
+#730000
+1!
+13
+1=
+#740000
+0!
+03
+0=
+#750000
+1!
+13
+1=
+#760000
+0!
+03
+0=
+#770000
+1!
+13
+1=
+#780000
+0!
+03
+0=
+#790000
+1!
+13
+1=
+#800000
+0!
+03
+0=
+#810000
+1!
+13
+1=
+#820000
+0!
+03
+0=
+#830000
+1!
+13
+1=
+#840000
+0!
+03
+0=
+#850000
+1!
+13
+1=
+#860000
+0!
+03
+0=
+#870000
+1!
+13
+1=
+#880000
+0!
+03
+0=
+#890000
+1!
+13
+1=
+#900000
+0!
+03
+0=
+#910000
+1!
+13
+1=
+#920000
+0!
+03
+0=
+#930000
+1!
+13
+1=
+#940000
+0!
+03
+0=
+#950000
+1!
+13
+1=
+#960000
+0!
+03
+0=
+#970000
+1!
+13
+1=
+#980000
+0!
+03
+0=
+#990000
+1!
+13
+1=
+#1000000

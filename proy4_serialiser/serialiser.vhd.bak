@@ -1,0 +1,87 @@
+-- Librerias 
+
+library ieee;
+
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+-- Entidad
+
+entity serialiser is 
+
+-- Datos genericos 
+
+	generic(
+		longitud_serialiser : integer := 4 
+	);
+
+-- Puertos de entrada y salida
+
+	port(
+		
+		-- Entradas
+	
+		serialiser_clock:  in std_logic;
+		serialiser_reset:  in std_logic;
+		serialiser_shfen:	 in std_logic;
+		serialiser_load:   in std_logic;
+		serialiser_Data:   in std_logic_vector (longitud_serialiser - 1 downto 0);
+		
+		-- Salidas
+		
+		serialiser_dout: out std_logic
+		
+	);
+	
+end entity serialiser;
+
+-- Arquitectura 
+
+architecture func_serialiser of serialiser is 
+
+-- Señales 
+	signal data_register : std_logic_vector (longitud_serialiser - 1 downto 0) := (others => '0');
+
+begin 
+-- Procesos 
+
+	serialiser_process: process (serialiser_clock, serialiser_reset)
+	begin 
+		
+		-- Analisis de la señal de reset
+		
+		if (serialiser_reset = '1') then 
+		
+			-- Salidas a 0 en caso que se active el reset
+			data_register <= (others => '0');
+		
+		elsif ((serialiser_reset = '0') and (rising_edge(serialiser_clock))) then 
+		
+			-- Salidas para los pulsos de reloj y el reset desactivado
+			
+			if (serialiser_load = '1') then 
+				
+				-- Si la carga está activada, guardamos en el registro los datos del serializador
+				
+				data_register <= serialiser_Data;
+			
+				-- Realizamos el desplazamiento de bits
+				
+				if (serialiser_shfen = '1') then 
+				
+					data_register <= '0' & data_register(longitud_serialiser - 1 downto 0);
+				
+				end if 
+				
+			end if;
+			
+		end if;
+		
+	end process serialiser_process;
+	
+	-- Cargamo el dato de salida en la señal del registro
+	
+	serialiser_dout <= data_register(0);
+	
+end architecture func_serialiser;

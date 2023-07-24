@@ -1,0 +1,41 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'debounce_gpio_ck'
+Slack : -2.833
+TNS   : -39.673
+
+Type  : Slow 1200mV 85C Model Hold 'debounce_gpio_ck'
+Slack : 0.508
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'debounce_gpio_ck'
+Slack : -3.000
+TNS   : -25.305
+
+Type  : Slow 1200mV 0C Model Setup 'debounce_gpio_ck'
+Slack : -2.583
+TNS   : -36.050
+
+Type  : Slow 1200mV 0C Model Hold 'debounce_gpio_ck'
+Slack : 0.468
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'debounce_gpio_ck'
+Slack : -3.000
+TNS   : -25.305
+
+Type  : Fast 1200mV 0C Model Setup 'debounce_gpio_ck'
+Slack : -0.551
+TNS   : -7.169
+
+Type  : Fast 1200mV 0C Model Hold 'debounce_gpio_ck'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'debounce_gpio_ck'
+Slack : -3.000
+TNS   : -19.089
+
+------------------------------------------------------------

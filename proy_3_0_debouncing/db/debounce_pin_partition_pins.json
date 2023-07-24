@@ -1,0 +1,21 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "debounce_gpio_ou",
+					"strict" : false
+				},
+				{
+					"name" : "debounce_gpio_in",
+					"strict" : false
+				},
+				{
+					"name" : "debounce_gpio_ck",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

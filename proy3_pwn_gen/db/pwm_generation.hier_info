@@ -1,0 +1,31 @@
+|pwm_generation
+pwm_clock_in => pwm_output~reg0.CLK
+pwm_clock_in => contador_pwm[0].CLK
+pwm_clock_in => contador_pwm[1].CLK
+pwm_clock_in => contador_pwm[2].CLK
+pwm_clock_in => contador_pwm[3].CLK
+pwm_clock_in => contador_pwm[4].CLK
+pwm_clock_in => contador_pwm[5].CLK
+pwm_clock_in => contador_pwm[6].CLK
+pwm_clock_in => contador_pwm[7].CLK
+pwm_clock_in => contador_pwm[8].CLK
+pwm_clock_in => contador_pwm[9].CLK
+pwm_clock_in => contador_pwm[10].CLK
+pwm_clock_in => contador_pwm[11].CLK
+pwm_clock_in => contador_pwm[12].CLK
+pwm_clock_in => contador_pwm[13].CLK
+pwm_clock_in => contador_pwm[14].CLK
+pwm_clock_in => contador_pwm[15].CLK
+pwm_clock_in => contador_pwm[16].CLK
+pwm_clock_in => contador_pwm[17].CLK
+pwm_clock_in => contador_pwm[18].CLK
+pwm_clock_in => contador_pwm[19].CLK
+pwm_clock_in => contador_pwm[20].CLK
+pwm_clock_in => contador_pwm[21].CLK
+pwm_clock_in => contador_pwm[22].CLK
+pwm_clock_in => contador_pwm[23].CLK
+pwm_clock_in => contador_pwm[24].CLK
+pwm_clock_in => contador_pwm[25].CLK
+pwm_output << pwm_output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

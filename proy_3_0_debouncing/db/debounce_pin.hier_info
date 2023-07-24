@@ -1,0 +1,34 @@
+|debounce_pin
+debounce_gpio_in => salida_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_in => contador_debo.OUTPUTSELECT
+debounce_gpio_ck => contador_debo[0].CLK
+debounce_gpio_ck => contador_debo[1].CLK
+debounce_gpio_ck => contador_debo[2].CLK
+debounce_gpio_ck => contador_debo[3].CLK
+debounce_gpio_ck => contador_debo[4].CLK
+debounce_gpio_ck => contador_debo[5].CLK
+debounce_gpio_ck => contador_debo[6].CLK
+debounce_gpio_ck => contador_debo[7].CLK
+debounce_gpio_ck => contador_debo[8].CLK
+debounce_gpio_ck => contador_debo[9].CLK
+debounce_gpio_ck => contador_debo[10].CLK
+debounce_gpio_ck => contador_debo[11].CLK
+debounce_gpio_ck => contador_debo[12].CLK
+debounce_gpio_ck => contador_debo[13].CLK
+debounce_gpio_ck => salida_debo.CLK
+debounce_gpio_ou <= salida_debo.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Mar 10 02:50:24 2023
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : servo_pwm
+Top-level Entity Name : servo_pwm
+Family : Cyclone IV E
+Total logic elements : 38
+    Total combinational functions : 38
+    Dedicated logic registers : 19
+Total registers : 19
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

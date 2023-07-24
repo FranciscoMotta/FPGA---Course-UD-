@@ -1,0 +1,20 @@
+|shift_generic
+clock_sig => data_outp[0]~reg0.CLK
+clock_sig => data_outp[1]~reg0.CLK
+clock_sig => data_outp[2]~reg0.CLK
+clock_sig => data_outp[3]~reg0.CLK
+reset_sig => data_outp[0]~reg0.ACLR
+reset_sig => data_outp[1]~reg0.ACLR
+reset_sig => data_outp[2]~reg0.ACLR
+reset_sig => data_outp[3]~reg0.ACLR
+shift_ena => data_outp.OUTPUTSELECT
+shift_ena => data_outp.OUTPUTSELECT
+shift_ena => data_outp.OUTPUTSELECT
+shift_ena => data_outp.OUTPUTSELECT
+data_inpt => data_outp.DATAB
+data_outp[0] << data_outp[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_outp[1] << data_outp[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_outp[2] << data_outp[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_outp[3] << data_outp[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,101 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Escritorio/FPGA - Course/proy4_comp/simulation/qsim
+Emultiplex
+Z1 w1681198869
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 76OUjOFMM1Jzd<9936DA;3
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 dANj__M<MaN@;H9Tkm=iP1
+!i122 2
+R0
+Z8 8multiplex.vho
+Z9 Fmultiplex.vho
+l0
+L35 1
+V>GCNi;lU489^i2TfSZWOe2
+!s100 c^>1zTVNW`LI>fX[G8<3z3
+Z10 OV;C;2020.1;71
+32
+Z11 !s110 1681198872
+!i10b 1
+Z12 !s108 1681198872.000000
+Z13 !s90 -work|work|multiplex.vho|
+Z14 !s107 multiplex.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 9 multiplex 0 22 >GCNi;lU489^i2TfSZWOe2
+!i122 2
+l66
+L43 137
+V>[^@O2Pc;Mdbc`7eMAjb[3
+!s100 i1CS4a:3?imaC;io>h7@J0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Emultiplex_vhd_vec_tst
+Z17 w1681198868
+R5
+R6
+!i122 3
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L32 1
+VD^FS3ZXY7PPEO]djE^cJc0
+!s100 2Oa^IcTj6gC@AI?H_=GAQ3
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform.vwf.vht|
+Z21 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Amultiplex_arch
+R5
+R6
+Z22 DEx4 work 21 multiplex_vhd_vec_tst 0 22 D^FS3ZXY7PPEO]djE^cJc0
+!i122 3
+l47
+Z23 L34 124
+Z24 VJENF0XATHcPNEX42L_<ge0
+Z25 !s100 :kdUGMP?11TW796ceMSz62
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16

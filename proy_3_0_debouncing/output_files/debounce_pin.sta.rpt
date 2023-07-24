@@ -1,0 +1,1172 @@
+Timing Analyzer report for debounce_pin
+Thu Mar 09 12:11:31 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'debounce_gpio_ck'
+ 13. Slow 1200mV 85C Model Hold: 'debounce_gpio_ck'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'debounce_gpio_ck'
+ 22. Slow 1200mV 0C Model Hold: 'debounce_gpio_ck'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'debounce_gpio_ck'
+ 30. Fast 1200mV 0C Model Hold: 'debounce_gpio_ck'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; debounce_pin                                        ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE6E22C8                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.2%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                             ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+; Clock Name       ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets              ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+; debounce_gpio_ck ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { debounce_gpio_ck } ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                              ;
++------------+-----------------+------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name       ; Note                                                          ;
++------------+-----------------+------------------+---------------------------------------------------------------+
+; 260.89 MHz ; 250.0 MHz       ; debounce_gpio_ck ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary       ;
++------------------+--------+---------------+
+; Clock            ; Slack  ; End Point TNS ;
++------------------+--------+---------------+
+; debounce_gpio_ck ; -2.833 ; -39.673       ;
++------------------+--------+---------------+
+
+
++------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary       ;
++------------------+-------+---------------+
+; Clock            ; Slack ; End Point TNS ;
++------------------+-------+---------------+
+; debounce_gpio_ck ; 0.508 ; 0.000         ;
++------------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++------------------+--------+-----------------------+
+; Clock            ; Slack  ; End Point TNS         ;
++------------------+--------+-----------------------+
+; debounce_gpio_ck ; -3.000 ; -25.305               ;
++------------------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'debounce_gpio_ck'                                                                               ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; -2.833 ; contador_debo[11] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.753      ;
+; -2.833 ; contador_debo[11] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.753      ;
+; -2.833 ; contador_debo[11] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.753      ;
+; -2.833 ; contador_debo[11] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.753      ;
+; -2.833 ; contador_debo[11] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.753      ;
+; -2.833 ; contador_debo[11] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.753      ;
+; -2.833 ; contador_debo[11] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.753      ;
+; -2.833 ; contador_debo[11] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.753      ;
+; -2.833 ; contador_debo[11] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.753      ;
+; -2.833 ; contador_debo[11] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.753      ;
+; -2.750 ; contador_debo[0]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.670      ;
+; -2.750 ; contador_debo[0]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.670      ;
+; -2.750 ; contador_debo[0]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.670      ;
+; -2.750 ; contador_debo[0]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.670      ;
+; -2.750 ; contador_debo[0]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.670      ;
+; -2.750 ; contador_debo[0]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.670      ;
+; -2.750 ; contador_debo[0]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.670      ;
+; -2.750 ; contador_debo[0]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.670      ;
+; -2.750 ; contador_debo[0]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.670      ;
+; -2.750 ; contador_debo[0]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.670      ;
+; -2.710 ; contador_debo[2]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; contador_debo[2]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; contador_debo[2]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; contador_debo[2]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; contador_debo[2]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; contador_debo[2]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; contador_debo[2]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; contador_debo[2]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; contador_debo[2]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; contador_debo[2]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.630      ;
+; -2.644 ; contador_debo[5]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.564      ;
+; -2.644 ; contador_debo[5]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.564      ;
+; -2.644 ; contador_debo[5]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.564      ;
+; -2.644 ; contador_debo[5]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.564      ;
+; -2.644 ; contador_debo[5]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.564      ;
+; -2.644 ; contador_debo[5]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.564      ;
+; -2.644 ; contador_debo[5]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.564      ;
+; -2.644 ; contador_debo[5]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.564      ;
+; -2.644 ; contador_debo[5]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.564      ;
+; -2.644 ; contador_debo[5]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.564      ;
+; -2.628 ; contador_debo[3]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.548      ;
+; -2.628 ; contador_debo[3]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.548      ;
+; -2.628 ; contador_debo[3]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.548      ;
+; -2.628 ; contador_debo[3]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.548      ;
+; -2.628 ; contador_debo[3]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.548      ;
+; -2.628 ; contador_debo[3]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.548      ;
+; -2.628 ; contador_debo[3]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.548      ;
+; -2.628 ; contador_debo[3]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.548      ;
+; -2.628 ; contador_debo[3]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.548      ;
+; -2.628 ; contador_debo[3]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.548      ;
+; -2.620 ; contador_debo[12] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.540      ;
+; -2.620 ; contador_debo[12] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.540      ;
+; -2.620 ; contador_debo[12] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.540      ;
+; -2.620 ; contador_debo[12] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.540      ;
+; -2.620 ; contador_debo[12] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.540      ;
+; -2.620 ; contador_debo[12] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.540      ;
+; -2.620 ; contador_debo[12] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.540      ;
+; -2.620 ; contador_debo[12] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.540      ;
+; -2.620 ; contador_debo[12] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.540      ;
+; -2.620 ; contador_debo[12] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.540      ;
+; -2.608 ; contador_debo[8]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.578     ; 3.031      ;
+; -2.608 ; contador_debo[8]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.578     ; 3.031      ;
+; -2.608 ; contador_debo[8]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.578     ; 3.031      ;
+; -2.608 ; contador_debo[8]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.578     ; 3.031      ;
+; -2.608 ; contador_debo[8]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.578     ; 3.031      ;
+; -2.608 ; contador_debo[8]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.578     ; 3.031      ;
+; -2.608 ; contador_debo[8]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.578     ; 3.031      ;
+; -2.608 ; contador_debo[8]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.578     ; 3.031      ;
+; -2.608 ; contador_debo[8]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.578     ; 3.031      ;
+; -2.608 ; contador_debo[8]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.578     ; 3.031      ;
+; -2.595 ; contador_debo[10] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.515      ;
+; -2.595 ; contador_debo[10] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.515      ;
+; -2.595 ; contador_debo[10] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.515      ;
+; -2.595 ; contador_debo[10] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.515      ;
+; -2.595 ; contador_debo[10] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.515      ;
+; -2.595 ; contador_debo[10] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.515      ;
+; -2.595 ; contador_debo[10] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.515      ;
+; -2.595 ; contador_debo[10] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.515      ;
+; -2.595 ; contador_debo[10] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.515      ;
+; -2.595 ; contador_debo[10] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.515      ;
+; -2.508 ; contador_debo[1]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.428      ;
+; -2.508 ; contador_debo[1]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.428      ;
+; -2.508 ; contador_debo[1]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.428      ;
+; -2.508 ; contador_debo[1]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.428      ;
+; -2.508 ; contador_debo[1]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.428      ;
+; -2.508 ; contador_debo[1]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.428      ;
+; -2.508 ; contador_debo[1]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.428      ;
+; -2.508 ; contador_debo[1]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.428      ;
+; -2.508 ; contador_debo[1]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.428      ;
+; -2.508 ; contador_debo[1]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.428      ;
+; -2.496 ; contador_debo[13] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.416      ;
+; -2.496 ; contador_debo[13] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.416      ;
+; -2.496 ; contador_debo[13] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.416      ;
+; -2.496 ; contador_debo[13] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.416      ;
+; -2.496 ; contador_debo[13] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.416      ;
+; -2.496 ; contador_debo[13] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.416      ;
+; -2.496 ; contador_debo[13] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.416      ;
+; -2.496 ; contador_debo[13] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.416      ;
+; -2.496 ; contador_debo[13] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.416      ;
+; -2.496 ; contador_debo[13] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.081     ; 3.416      ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'debounce_gpio_ck'                                                                               ;
++-------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node           ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; 0.508 ; contador_debo[13] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 0.801      ;
+; 0.620 ; contador_debo[5]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.410      ;
+; 0.637 ; contador_debo[4]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.427      ;
+; 0.743 ; contador_debo[7]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.102      ; 1.057      ;
+; 0.743 ; contador_debo[9]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.102      ; 1.057      ;
+; 0.745 ; contador_debo[8]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.102      ; 1.059      ;
+; 0.745 ; contador_debo[6]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.102      ; 1.059      ;
+; 0.751 ; contador_debo[5]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.541      ;
+; 0.760 ; contador_debo[3]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.550      ;
+; 0.760 ; contador_debo[5]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.550      ;
+; 0.762 ; contador_debo[1]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; contador_debo[5]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.055      ;
+; 0.763 ; contador_debo[2]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; contador_debo[3]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.056      ;
+; 0.764 ; contador_debo[4]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; contador_debo[12] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.057      ;
+; 0.768 ; contador_debo[4]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.558      ;
+; 0.776 ; contador_debo[2]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.566      ;
+; 0.777 ; contador_debo[4]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.567      ;
+; 0.787 ; contador_debo[0]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.080      ;
+; 0.891 ; contador_debo[5]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.681      ;
+; 0.891 ; contador_debo[3]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.681      ;
+; 0.899 ; contador_debo[1]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.689      ;
+; 0.900 ; contador_debo[3]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.690      ;
+; 0.907 ; contador_debo[2]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.697      ;
+; 0.908 ; contador_debo[4]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.698      ;
+; 0.916 ; contador_debo[2]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.706      ;
+; 0.917 ; contador_debo[0]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.707      ;
+; 0.959 ; contador_debo[10] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.252      ;
+; 0.965 ; contador_debo[11] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.258      ;
+; 1.030 ; contador_debo[1]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.820      ;
+; 1.031 ; contador_debo[3]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.821      ;
+; 1.039 ; contador_debo[1]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.829      ;
+; 1.043 ; salida_debo       ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.101      ; 1.356      ;
+; 1.047 ; contador_debo[2]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.837      ;
+; 1.048 ; contador_debo[0]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.838      ;
+; 1.057 ; contador_debo[0]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.847      ;
+; 1.097 ; contador_debo[7]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.102      ; 1.411      ;
+; 1.106 ; contador_debo[6]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.102      ; 1.420      ;
+; 1.106 ; contador_debo[8]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.102      ; 1.420      ;
+; 1.115 ; contador_debo[6]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.102      ; 1.429      ;
+; 1.116 ; contador_debo[1]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.409      ;
+; 1.117 ; contador_debo[3]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.410      ;
+; 1.124 ; contador_debo[2]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.417      ;
+; 1.125 ; contador_debo[12] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; contador_debo[4]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; contador_debo[0]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.418      ;
+; 1.133 ; contador_debo[2]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.426      ;
+; 1.134 ; contador_debo[0]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.427      ;
+; 1.170 ; contador_debo[1]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.960      ;
+; 1.188 ; contador_debo[0]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.578      ; 1.978      ;
+; 1.228 ; contador_debo[7]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.102      ; 1.542      ;
+; 1.246 ; contador_debo[6]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.102      ; 1.560      ;
+; 1.247 ; contador_debo[1]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.540      ;
+; 1.248 ; contador_debo[3]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.541      ;
+; 1.256 ; contador_debo[1]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.549      ;
+; 1.264 ; contador_debo[2]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.557      ;
+; 1.265 ; contador_debo[0]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.558      ;
+; 1.274 ; contador_debo[0]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.567      ;
+; 1.297 ; contador_debo[10] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.590      ;
+; 1.320 ; contador_debo[11] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.613      ;
+; 1.329 ; contador_debo[10] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.622      ;
+; 1.387 ; contador_debo[1]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.680      ;
+; 1.397 ; contador_debo[5]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.690      ;
+; 1.398 ; contador_debo[11] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.691      ;
+; 1.405 ; contador_debo[0]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.698      ;
+; 1.414 ; contador_debo[4]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.707      ;
+; 1.428 ; contador_debo[4]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.577      ; 2.217      ;
+; 1.437 ; contador_debo[10] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.730      ;
+; 1.528 ; contador_debo[5]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.821      ;
+; 1.537 ; contador_debo[5]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.830      ;
+; 1.537 ; contador_debo[3]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.830      ;
+; 1.544 ; contador_debo[1]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.577      ; 2.333      ;
+; 1.545 ; contador_debo[4]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.838      ;
+; 1.553 ; contador_debo[2]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.846      ;
+; 1.554 ; contador_debo[4]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.847      ;
+; 1.594 ; contador_debo[9]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.395     ; 1.411      ;
+; 1.612 ; contador_debo[8]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.395     ; 1.429      ;
+; 1.623 ; contador_debo[5]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.577      ; 2.412      ;
+; 1.659 ; contador_debo[3]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.577      ; 2.448      ;
+; 1.668 ; contador_debo[5]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.961      ;
+; 1.668 ; contador_debo[3]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.961      ;
+; 1.676 ; contador_debo[1]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.969      ;
+; 1.677 ; contador_debo[3]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.970      ;
+; 1.684 ; contador_debo[2]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.977      ;
+; 1.685 ; contador_debo[4]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.978      ;
+; 1.693 ; contador_debo[2]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.986      ;
+; 1.694 ; contador_debo[0]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 1.987      ;
+; 1.725 ; contador_debo[9]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.395     ; 1.542      ;
+; 1.734 ; contador_debo[7]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.395     ; 1.551      ;
+; 1.734 ; contador_debo[9]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.395     ; 1.551      ;
+; 1.738 ; contador_debo[2]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.577      ; 2.527      ;
+; 1.743 ; contador_debo[8]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.395     ; 1.560      ;
+; 1.752 ; contador_debo[6]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.395     ; 1.569      ;
+; 1.752 ; contador_debo[8]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.395     ; 1.569      ;
+; 1.777 ; contador_debo[0]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.577      ; 2.566      ;
+; 1.799 ; contador_debo[9]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.101      ; 2.112      ;
+; 1.807 ; contador_debo[1]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 2.100      ;
+; 1.808 ; contador_debo[3]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 2.101      ;
+; 1.816 ; contador_debo[1]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.081      ; 2.109      ;
++-------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                              ;
++-----------+-----------------+------------------+---------------------------------------------------------------+
+; Fmax      ; Restricted Fmax ; Clock Name       ; Note                                                          ;
++-----------+-----------------+------------------+---------------------------------------------------------------+
+; 279.1 MHz ; 250.0 MHz       ; debounce_gpio_ck ; limit due to minimum period restriction (max I/O toggle rate) ;
++-----------+-----------------+------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary        ;
++------------------+--------+---------------+
+; Clock            ; Slack  ; End Point TNS ;
++------------------+--------+---------------+
+; debounce_gpio_ck ; -2.583 ; -36.050       ;
++------------------+--------+---------------+
+
+
++------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary        ;
++------------------+-------+---------------+
+; Clock            ; Slack ; End Point TNS ;
++------------------+-------+---------------+
+; debounce_gpio_ck ; 0.468 ; 0.000         ;
++------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++------------------+--------+----------------------+
+; Clock            ; Slack  ; End Point TNS        ;
++------------------+--------+----------------------+
+; debounce_gpio_ck ; -3.000 ; -25.305              ;
++------------------+--------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'debounce_gpio_ck'                                                                                ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; -2.583 ; contador_debo[11] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.512      ;
+; -2.583 ; contador_debo[11] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.512      ;
+; -2.583 ; contador_debo[11] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.512      ;
+; -2.583 ; contador_debo[11] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.512      ;
+; -2.583 ; contador_debo[11] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.512      ;
+; -2.583 ; contador_debo[11] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.512      ;
+; -2.583 ; contador_debo[11] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.512      ;
+; -2.583 ; contador_debo[11] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.512      ;
+; -2.583 ; contador_debo[11] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.512      ;
+; -2.583 ; contador_debo[11] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.512      ;
+; -2.473 ; contador_debo[0]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.402      ;
+; -2.473 ; contador_debo[0]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.402      ;
+; -2.473 ; contador_debo[0]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.402      ;
+; -2.473 ; contador_debo[0]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.402      ;
+; -2.473 ; contador_debo[0]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.402      ;
+; -2.473 ; contador_debo[0]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.402      ;
+; -2.473 ; contador_debo[0]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.402      ;
+; -2.473 ; contador_debo[0]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.402      ;
+; -2.473 ; contador_debo[0]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.402      ;
+; -2.473 ; contador_debo[0]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.402      ;
+; -2.442 ; contador_debo[2]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.371      ;
+; -2.442 ; contador_debo[2]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.371      ;
+; -2.442 ; contador_debo[2]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.371      ;
+; -2.442 ; contador_debo[2]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.371      ;
+; -2.442 ; contador_debo[2]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.371      ;
+; -2.442 ; contador_debo[2]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.371      ;
+; -2.442 ; contador_debo[2]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.371      ;
+; -2.442 ; contador_debo[2]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.371      ;
+; -2.442 ; contador_debo[2]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.371      ;
+; -2.442 ; contador_debo[2]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.371      ;
+; -2.395 ; contador_debo[12] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.324      ;
+; -2.395 ; contador_debo[12] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.324      ;
+; -2.395 ; contador_debo[12] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.324      ;
+; -2.395 ; contador_debo[12] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.324      ;
+; -2.395 ; contador_debo[12] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.324      ;
+; -2.395 ; contador_debo[12] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.324      ;
+; -2.395 ; contador_debo[12] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.324      ;
+; -2.395 ; contador_debo[12] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.324      ;
+; -2.395 ; contador_debo[12] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.324      ;
+; -2.395 ; contador_debo[12] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.324      ;
+; -2.381 ; contador_debo[10] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.310      ;
+; -2.381 ; contador_debo[10] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.310      ;
+; -2.381 ; contador_debo[10] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.310      ;
+; -2.381 ; contador_debo[10] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.310      ;
+; -2.381 ; contador_debo[10] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.310      ;
+; -2.381 ; contador_debo[10] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.310      ;
+; -2.381 ; contador_debo[10] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.310      ;
+; -2.381 ; contador_debo[10] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.310      ;
+; -2.381 ; contador_debo[10] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.310      ;
+; -2.381 ; contador_debo[10] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.310      ;
+; -2.364 ; contador_debo[5]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.293      ;
+; -2.364 ; contador_debo[5]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.293      ;
+; -2.364 ; contador_debo[5]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.293      ;
+; -2.364 ; contador_debo[5]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.293      ;
+; -2.364 ; contador_debo[5]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.293      ;
+; -2.364 ; contador_debo[5]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.293      ;
+; -2.364 ; contador_debo[5]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.293      ;
+; -2.364 ; contador_debo[5]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.293      ;
+; -2.364 ; contador_debo[5]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.293      ;
+; -2.364 ; contador_debo[5]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.293      ;
+; -2.344 ; contador_debo[3]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.273      ;
+; -2.344 ; contador_debo[3]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.273      ;
+; -2.344 ; contador_debo[3]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.273      ;
+; -2.344 ; contador_debo[3]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.273      ;
+; -2.344 ; contador_debo[3]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.273      ;
+; -2.344 ; contador_debo[3]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.273      ;
+; -2.344 ; contador_debo[3]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.273      ;
+; -2.344 ; contador_debo[3]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.273      ;
+; -2.344 ; contador_debo[3]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.273      ;
+; -2.344 ; contador_debo[3]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.273      ;
+; -2.341 ; contador_debo[8]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.540     ; 2.803      ;
+; -2.341 ; contador_debo[8]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.540     ; 2.803      ;
+; -2.341 ; contador_debo[8]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.540     ; 2.803      ;
+; -2.341 ; contador_debo[8]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.540     ; 2.803      ;
+; -2.341 ; contador_debo[8]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.540     ; 2.803      ;
+; -2.341 ; contador_debo[8]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.540     ; 2.803      ;
+; -2.341 ; contador_debo[8]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.540     ; 2.803      ;
+; -2.341 ; contador_debo[8]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.540     ; 2.803      ;
+; -2.341 ; contador_debo[8]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.540     ; 2.803      ;
+; -2.341 ; contador_debo[8]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.540     ; 2.803      ;
+; -2.271 ; contador_debo[1]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.200      ;
+; -2.271 ; contador_debo[1]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.200      ;
+; -2.271 ; contador_debo[1]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.200      ;
+; -2.271 ; contador_debo[1]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.200      ;
+; -2.271 ; contador_debo[1]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.200      ;
+; -2.271 ; contador_debo[1]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.200      ;
+; -2.271 ; contador_debo[1]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.200      ;
+; -2.271 ; contador_debo[1]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.200      ;
+; -2.271 ; contador_debo[1]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.200      ;
+; -2.271 ; contador_debo[1]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.200      ;
+; -2.259 ; contador_debo[13] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.188      ;
+; -2.259 ; contador_debo[13] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.188      ;
+; -2.259 ; contador_debo[13] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.188      ;
+; -2.259 ; contador_debo[13] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.188      ;
+; -2.259 ; contador_debo[13] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.188      ;
+; -2.259 ; contador_debo[13] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.188      ;
+; -2.259 ; contador_debo[13] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.188      ;
+; -2.259 ; contador_debo[13] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.188      ;
+; -2.259 ; contador_debo[13] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.188      ;
+; -2.259 ; contador_debo[13] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.073     ; 3.188      ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'debounce_gpio_ck'                                                                                ;
++-------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node           ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; 0.468 ; contador_debo[13] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 0.736      ;
+; 0.561 ; contador_debo[5]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.296      ;
+; 0.574 ; contador_debo[4]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.309      ;
+; 0.654 ; contador_debo[5]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.389      ;
+; 0.681 ; contador_debo[4]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.416      ;
+; 0.683 ; contador_debo[5]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.418      ;
+; 0.687 ; contador_debo[3]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.422      ;
+; 0.690 ; contador_debo[9]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.092      ; 0.977      ;
+; 0.690 ; contador_debo[7]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.092      ; 0.977      ;
+; 0.693 ; contador_debo[6]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.092      ; 0.980      ;
+; 0.693 ; contador_debo[8]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.092      ; 0.980      ;
+; 0.696 ; contador_debo[4]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.431      ;
+; 0.696 ; contador_debo[2]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.431      ;
+; 0.706 ; contador_debo[5]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 0.974      ;
+; 0.707 ; contador_debo[1]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; contador_debo[2]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; contador_debo[4]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 0.975      ;
+; 0.708 ; contador_debo[3]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 0.976      ;
+; 0.708 ; contador_debo[12] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 0.976      ;
+; 0.734 ; contador_debo[0]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.002      ;
+; 0.776 ; contador_debo[5]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.511      ;
+; 0.782 ; contador_debo[3]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.517      ;
+; 0.803 ; contador_debo[4]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.538      ;
+; 0.803 ; contador_debo[2]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.538      ;
+; 0.808 ; contador_debo[1]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.543      ;
+; 0.809 ; contador_debo[3]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.544      ;
+; 0.818 ; contador_debo[2]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.553      ;
+; 0.821 ; contador_debo[0]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.556      ;
+; 0.864 ; contador_debo[10] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.132      ;
+; 0.876 ; contador_debo[11] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.144      ;
+; 0.903 ; contador_debo[1]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.638      ;
+; 0.904 ; contador_debo[3]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.639      ;
+; 0.925 ; contador_debo[2]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.660      ;
+; 0.926 ; contador_debo[0]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.661      ;
+; 0.930 ; contador_debo[1]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.665      ;
+; 0.943 ; contador_debo[0]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.678      ;
+; 0.978 ; salida_debo       ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.091      ; 1.264      ;
+; 1.011 ; contador_debo[6]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.092      ; 1.298      ;
+; 1.011 ; contador_debo[8]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.092      ; 1.298      ;
+; 1.014 ; contador_debo[7]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.092      ; 1.301      ;
+; 1.025 ; contador_debo[1]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.760      ;
+; 1.026 ; contador_debo[4]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.294      ;
+; 1.026 ; contador_debo[2]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.294      ;
+; 1.027 ; contador_debo[12] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; contador_debo[6]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.092      ; 1.314      ;
+; 1.027 ; contador_debo[0]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.295      ;
+; 1.031 ; contador_debo[1]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.299      ;
+; 1.032 ; contador_debo[3]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.300      ;
+; 1.041 ; contador_debo[2]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.309      ;
+; 1.044 ; contador_debo[0]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.312      ;
+; 1.048 ; contador_debo[0]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.540      ; 1.783      ;
+; 1.109 ; contador_debo[7]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.092      ; 1.396      ;
+; 1.126 ; contador_debo[1]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.394      ;
+; 1.127 ; contador_debo[3]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.395      ;
+; 1.133 ; contador_debo[6]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.092      ; 1.420      ;
+; 1.148 ; contador_debo[2]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.416      ;
+; 1.149 ; contador_debo[0]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.417      ;
+; 1.153 ; contador_debo[1]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.421      ;
+; 1.160 ; contador_debo[10] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.428      ;
+; 1.166 ; contador_debo[0]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.434      ;
+; 1.234 ; contador_debo[11] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.502      ;
+; 1.245 ; contador_debo[10] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.513      ;
+; 1.248 ; contador_debo[1]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.516      ;
+; 1.251 ; contador_debo[11] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.519      ;
+; 1.271 ; contador_debo[0]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.539      ;
+; 1.272 ; contador_debo[5]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.540      ;
+; 1.274 ; contador_debo[4]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.539      ; 2.008      ;
+; 1.282 ; contador_debo[10] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.550      ;
+; 1.285 ; contador_debo[4]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.553      ;
+; 1.365 ; contador_debo[5]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.633      ;
+; 1.392 ; contador_debo[4]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.660      ;
+; 1.394 ; contador_debo[5]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.662      ;
+; 1.398 ; contador_debo[3]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.666      ;
+; 1.403 ; contador_debo[1]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.539      ; 2.137      ;
+; 1.407 ; contador_debo[4]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.675      ;
+; 1.407 ; contador_debo[2]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.675      ;
+; 1.447 ; contador_debo[5]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.539      ; 2.181      ;
+; 1.474 ; contador_debo[3]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.539      ; 2.208      ;
+; 1.481 ; contador_debo[9]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.375     ; 1.301      ;
+; 1.487 ; contador_debo[5]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.755      ;
+; 1.493 ; contador_debo[3]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.761      ;
+; 1.494 ; contador_debo[8]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.375     ; 1.314      ;
+; 1.514 ; contador_debo[4]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.782      ;
+; 1.514 ; contador_debo[2]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.782      ;
+; 1.519 ; contador_debo[1]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.787      ;
+; 1.520 ; contador_debo[3]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.788      ;
+; 1.529 ; contador_debo[2]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.797      ;
+; 1.532 ; contador_debo[0]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.800      ;
+; 1.567 ; contador_debo[2]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.539      ; 2.301      ;
+; 1.576 ; contador_debo[9]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.375     ; 1.396      ;
+; 1.597 ; contador_debo[0]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.539      ; 2.331      ;
+; 1.600 ; contador_debo[8]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.375     ; 1.420      ;
+; 1.603 ; contador_debo[7]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.375     ; 1.423      ;
+; 1.603 ; contador_debo[9]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.375     ; 1.423      ;
+; 1.614 ; contador_debo[1]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.882      ;
+; 1.615 ; contador_debo[3]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.883      ;
+; 1.616 ; contador_debo[6]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.375     ; 1.436      ;
+; 1.616 ; contador_debo[8]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.375     ; 1.436      ;
+; 1.636 ; contador_debo[2]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.904      ;
+; 1.637 ; contador_debo[0]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.073      ; 1.905      ;
++-------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary        ;
++------------------+--------+---------------+
+; Clock            ; Slack  ; End Point TNS ;
++------------------+--------+---------------+
+; debounce_gpio_ck ; -0.551 ; -7.169        ;
++------------------+--------+---------------+
+
+
++------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary        ;
++------------------+-------+---------------+
+; Clock            ; Slack ; End Point TNS ;
++------------------+-------+---------------+
+; debounce_gpio_ck ; 0.204 ; 0.000         ;
++------------------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++------------------+--------+----------------------+
+; Clock            ; Slack  ; End Point TNS        ;
++------------------+--------+----------------------+
+; debounce_gpio_ck ; -3.000 ; -19.089              ;
++------------------+--------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'debounce_gpio_ck'                                                                                ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; -0.551 ; contador_debo[11] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.502      ;
+; -0.551 ; contador_debo[11] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.502      ;
+; -0.551 ; contador_debo[11] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.502      ;
+; -0.551 ; contador_debo[11] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.502      ;
+; -0.551 ; contador_debo[11] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.502      ;
+; -0.551 ; contador_debo[11] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.502      ;
+; -0.551 ; contador_debo[11] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.502      ;
+; -0.551 ; contador_debo[11] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.502      ;
+; -0.551 ; contador_debo[11] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.502      ;
+; -0.551 ; contador_debo[11] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.502      ;
+; -0.528 ; contador_debo[0]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.479      ;
+; -0.528 ; contador_debo[0]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.479      ;
+; -0.528 ; contador_debo[0]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.479      ;
+; -0.528 ; contador_debo[0]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.479      ;
+; -0.528 ; contador_debo[0]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.479      ;
+; -0.528 ; contador_debo[0]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.479      ;
+; -0.528 ; contador_debo[0]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.479      ;
+; -0.528 ; contador_debo[0]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.479      ;
+; -0.528 ; contador_debo[0]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.479      ;
+; -0.528 ; contador_debo[0]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.479      ;
+; -0.521 ; contador_debo[5]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.472      ;
+; -0.521 ; contador_debo[5]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.472      ;
+; -0.521 ; contador_debo[5]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.472      ;
+; -0.521 ; contador_debo[5]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.472      ;
+; -0.521 ; contador_debo[5]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.472      ;
+; -0.521 ; contador_debo[5]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.472      ;
+; -0.521 ; contador_debo[5]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.472      ;
+; -0.521 ; contador_debo[5]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.472      ;
+; -0.521 ; contador_debo[5]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.472      ;
+; -0.521 ; contador_debo[5]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.472      ;
+; -0.514 ; contador_debo[3]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.465      ;
+; -0.514 ; contador_debo[3]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.465      ;
+; -0.514 ; contador_debo[3]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.465      ;
+; -0.514 ; contador_debo[3]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.465      ;
+; -0.514 ; contador_debo[3]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.465      ;
+; -0.514 ; contador_debo[3]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.465      ;
+; -0.514 ; contador_debo[3]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.465      ;
+; -0.514 ; contador_debo[3]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.465      ;
+; -0.514 ; contador_debo[3]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.465      ;
+; -0.514 ; contador_debo[3]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.465      ;
+; -0.508 ; contador_debo[2]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.459      ;
+; -0.508 ; contador_debo[2]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.459      ;
+; -0.508 ; contador_debo[2]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.459      ;
+; -0.508 ; contador_debo[2]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.459      ;
+; -0.508 ; contador_debo[2]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.459      ;
+; -0.508 ; contador_debo[2]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.459      ;
+; -0.508 ; contador_debo[2]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.459      ;
+; -0.508 ; contador_debo[2]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.459      ;
+; -0.508 ; contador_debo[2]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.459      ;
+; -0.508 ; contador_debo[2]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.459      ;
+; -0.488 ; contador_debo[8]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.238      ;
+; -0.488 ; contador_debo[8]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.238      ;
+; -0.488 ; contador_debo[8]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.238      ;
+; -0.488 ; contador_debo[8]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.238      ;
+; -0.488 ; contador_debo[8]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.238      ;
+; -0.488 ; contador_debo[8]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.238      ;
+; -0.488 ; contador_debo[8]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.238      ;
+; -0.488 ; contador_debo[8]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.238      ;
+; -0.488 ; contador_debo[8]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.238      ;
+; -0.488 ; contador_debo[8]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.238      ;
+; -0.467 ; contador_debo[13] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.418      ;
+; -0.467 ; contador_debo[13] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.418      ;
+; -0.467 ; contador_debo[13] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.418      ;
+; -0.467 ; contador_debo[13] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.418      ;
+; -0.467 ; contador_debo[13] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.418      ;
+; -0.467 ; contador_debo[13] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.418      ;
+; -0.467 ; contador_debo[13] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.418      ;
+; -0.467 ; contador_debo[13] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.418      ;
+; -0.467 ; contador_debo[13] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.418      ;
+; -0.467 ; contador_debo[13] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.418      ;
+; -0.465 ; contador_debo[12] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.416      ;
+; -0.465 ; contador_debo[12] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.416      ;
+; -0.465 ; contador_debo[12] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.416      ;
+; -0.465 ; contador_debo[12] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.416      ;
+; -0.465 ; contador_debo[12] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.416      ;
+; -0.465 ; contador_debo[12] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.416      ;
+; -0.465 ; contador_debo[12] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.416      ;
+; -0.465 ; contador_debo[12] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.416      ;
+; -0.465 ; contador_debo[12] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.416      ;
+; -0.465 ; contador_debo[12] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.416      ;
+; -0.452 ; contador_debo[10] ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.403      ;
+; -0.452 ; contador_debo[10] ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.403      ;
+; -0.452 ; contador_debo[10] ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.403      ;
+; -0.452 ; contador_debo[10] ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.403      ;
+; -0.452 ; contador_debo[10] ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.403      ;
+; -0.452 ; contador_debo[10] ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.403      ;
+; -0.452 ; contador_debo[10] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.403      ;
+; -0.452 ; contador_debo[10] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.403      ;
+; -0.452 ; contador_debo[10] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.403      ;
+; -0.452 ; contador_debo[10] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.036     ; 1.403      ;
+; -0.444 ; contador_debo[7]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.194      ;
+; -0.444 ; contador_debo[7]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.194      ;
+; -0.444 ; contador_debo[7]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.194      ;
+; -0.444 ; contador_debo[7]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.194      ;
+; -0.444 ; contador_debo[7]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.194      ;
+; -0.444 ; contador_debo[7]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.194      ;
+; -0.444 ; contador_debo[7]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.194      ;
+; -0.444 ; contador_debo[7]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.194      ;
+; -0.444 ; contador_debo[7]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.194      ;
+; -0.444 ; contador_debo[7]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 1.000        ; -0.237     ; 1.194      ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'debounce_gpio_ck'                                                                                ;
++-------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node           ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; 0.204 ; contador_debo[13] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.324      ;
+; 0.253 ; contador_debo[5]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.574      ;
+; 0.266 ; contador_debo[4]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.587      ;
+; 0.297 ; contador_debo[7]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.426      ;
+; 0.298 ; contador_debo[8]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.427      ;
+; 0.298 ; contador_debo[9]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.427      ;
+; 0.298 ; contador_debo[6]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.427      ;
+; 0.305 ; contador_debo[5]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.425      ;
+; 0.306 ; contador_debo[1]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; contador_debo[2]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; contador_debo[3]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; contador_debo[4]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; contador_debo[12] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.426      ;
+; 0.316 ; contador_debo[5]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.637      ;
+; 0.317 ; contador_debo[0]  ; contador_debo[0]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.437      ;
+; 0.319 ; contador_debo[5]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.640      ;
+; 0.320 ; contador_debo[3]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.641      ;
+; 0.329 ; contador_debo[4]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.650      ;
+; 0.332 ; contador_debo[4]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.653      ;
+; 0.332 ; contador_debo[2]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.653      ;
+; 0.373 ; contador_debo[11] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.493      ;
+; 0.375 ; contador_debo[10] ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.495      ;
+; 0.382 ; contador_debo[5]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.703      ;
+; 0.383 ; contador_debo[3]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.704      ;
+; 0.386 ; contador_debo[3]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.707      ;
+; 0.386 ; contador_debo[1]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.707      ;
+; 0.395 ; contador_debo[4]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.716      ;
+; 0.395 ; contador_debo[2]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.716      ;
+; 0.398 ; contador_debo[2]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.719      ;
+; 0.398 ; contador_debo[0]  ; contador_debo[6]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.719      ;
+; 0.407 ; salida_debo       ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.536      ;
+; 0.446 ; contador_debo[7]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.575      ;
+; 0.449 ; contador_debo[3]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.770      ;
+; 0.449 ; contador_debo[1]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.770      ;
+; 0.452 ; contador_debo[1]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.773      ;
+; 0.455 ; contador_debo[1]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.575      ;
+; 0.455 ; contador_debo[3]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.575      ;
+; 0.456 ; contador_debo[6]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.585      ;
+; 0.456 ; contador_debo[8]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.585      ;
+; 0.459 ; contador_debo[6]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.588      ;
+; 0.461 ; contador_debo[2]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.782      ;
+; 0.461 ; contador_debo[0]  ; contador_debo[7]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.782      ;
+; 0.464 ; contador_debo[12] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.584      ;
+; 0.464 ; contador_debo[4]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.584      ;
+; 0.464 ; contador_debo[0]  ; contador_debo[1]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.584      ;
+; 0.464 ; contador_debo[2]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.584      ;
+; 0.464 ; contador_debo[0]  ; contador_debo[8]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.785      ;
+; 0.467 ; contador_debo[0]  ; contador_debo[2]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.587      ;
+; 0.467 ; contador_debo[2]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.587      ;
+; 0.509 ; contador_debo[7]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.638      ;
+; 0.515 ; contador_debo[1]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.836      ;
+; 0.518 ; contador_debo[3]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.638      ;
+; 0.518 ; contador_debo[1]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.638      ;
+; 0.521 ; contador_debo[1]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.641      ;
+; 0.522 ; contador_debo[11] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.642      ;
+; 0.522 ; contador_debo[6]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.651      ;
+; 0.527 ; contador_debo[0]  ; contador_debo[9]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.848      ;
+; 0.530 ; contador_debo[2]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.650      ;
+; 0.530 ; contador_debo[0]  ; contador_debo[3]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.650      ;
+; 0.533 ; contador_debo[10] ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.653      ;
+; 0.533 ; contador_debo[0]  ; contador_debo[4]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.653      ;
+; 0.536 ; contador_debo[10] ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.656      ;
+; 0.581 ; contador_debo[4]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.902      ;
+; 0.584 ; contador_debo[1]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.704      ;
+; 0.585 ; contador_debo[11] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.705      ;
+; 0.586 ; contador_debo[5]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.706      ;
+; 0.596 ; contador_debo[0]  ; contador_debo[5]  ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.716      ;
+; 0.599 ; contador_debo[10] ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.719      ;
+; 0.599 ; contador_debo[4]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.719      ;
+; 0.623 ; contador_debo[1]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.944      ;
+; 0.648 ; contador_debo[9]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.156     ; 0.576      ;
+; 0.649 ; contador_debo[5]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.769      ;
+; 0.652 ; contador_debo[5]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.772      ;
+; 0.653 ; contador_debo[3]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.773      ;
+; 0.660 ; contador_debo[8]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.156     ; 0.588      ;
+; 0.662 ; contador_debo[4]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.782      ;
+; 0.665 ; contador_debo[4]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.785      ;
+; 0.665 ; contador_debo[2]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.785      ;
+; 0.667 ; contador_debo[5]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.988      ;
+; 0.677 ; contador_debo[3]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 0.998      ;
+; 0.709 ; contador_debo[2]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 1.030      ;
+; 0.711 ; contador_debo[9]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.156     ; 0.639      ;
+; 0.713 ; contador_debo[7]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.156     ; 0.641      ;
+; 0.714 ; contador_debo[9]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.156     ; 0.642      ;
+; 0.715 ; contador_debo[5]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.835      ;
+; 0.716 ; contador_debo[3]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.836      ;
+; 0.719 ; contador_debo[3]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.839      ;
+; 0.719 ; contador_debo[1]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.839      ;
+; 0.721 ; contador_debo[9]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.045      ; 0.850      ;
+; 0.723 ; contador_debo[8]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.156     ; 0.651      ;
+; 0.724 ; contador_debo[0]  ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 1.045      ;
+; 0.726 ; contador_debo[6]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.156     ; 0.654      ;
+; 0.726 ; contador_debo[8]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.156     ; 0.654      ;
+; 0.728 ; contador_debo[4]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.848      ;
+; 0.728 ; contador_debo[2]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.848      ;
+; 0.731 ; contador_debo[2]  ; contador_debo[12] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.851      ;
+; 0.731 ; contador_debo[0]  ; contador_debo[10] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.036      ; 0.851      ;
+; 0.767 ; contador_debo[13] ; salida_debo       ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; 0.237      ; 1.088      ;
+; 0.776 ; contador_debo[7]  ; contador_debo[11] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.156     ; 0.704      ;
+; 0.777 ; contador_debo[9]  ; contador_debo[13] ; debounce_gpio_ck ; debounce_gpio_ck ; 0.000        ; -0.156     ; 0.705      ;
++-------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++-------------------+---------+-------+----------+---------+---------------------+
+; Clock             ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack  ; -2.833  ; 0.204 ; N/A      ; N/A     ; -3.000              ;
+;  debounce_gpio_ck ; -2.833  ; 0.204 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS   ; -39.673 ; 0.0   ; 0.0      ; 0.0     ; -25.305             ;
+;  debounce_gpio_ck ; -39.673 ; 0.000 ; N/A      ; N/A     ; -25.305             ;
++-------------------+---------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                       ;
++------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin              ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; debounce_gpio_ou ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; debounce_gpio_in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; debounce_gpio_ck        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
++------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin              ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; debounce_gpio_ou ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin              ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; debounce_gpio_ou ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
++------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin              ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; debounce_gpio_ou ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Setup Transfers                                                                 ;
++------------------+------------------+----------+----------+----------+----------+
+; From Clock       ; To Clock         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------+------------------+----------+----------+----------+----------+
+; debounce_gpio_ck ; debounce_gpio_ck ; 376      ; 0        ; 0        ; 0        ;
++------------------+------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------+
+; Hold Transfers                                                                  ;
++------------------+------------------+----------+----------+----------+----------+
+; From Clock       ; To Clock         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------+------------------+----------+----------+----------+----------+
+; debounce_gpio_ck ; debounce_gpio_ck ; 376      ; 0        ; 0        ; 0        ;
++------------------+------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 15    ; 15   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++----------------------------------------------------------+
+; Clock Status Summary                                     ;
++------------------+------------------+------+-------------+
+; Target           ; Clock            ; Type ; Status      ;
++------------------+------------------+------+-------------+
+; debounce_gpio_ck ; debounce_gpio_ck ; Base ; Constrained ;
++------------------+------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; debounce_gpio_in ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                               ;
++------------------+---------------------------------------------------------------------------------------+
+; Output Port      ; Comment                                                                               ;
++------------------+---------------------------------------------------------------------------------------+
+; debounce_gpio_ou ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; debounce_gpio_in ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                               ;
++------------------+---------------------------------------------------------------------------------------+
+; Output Port      ; Comment                                                                               ;
++------------------+---------------------------------------------------------------------------------------+
+; debounce_gpio_ou ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Mar 09 12:11:28 2023
+Info: Command: quartus_sta debounce_pin -c debounce_pin
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'debounce_pin.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name debounce_gpio_ck debounce_gpio_ck
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.833
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.833             -39.673 debounce_gpio_ck 
+Info (332146): Worst-case hold slack is 0.508
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.508               0.000 debounce_gpio_ck 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -25.305 debounce_gpio_ck 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.583
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.583             -36.050 debounce_gpio_ck 
+Info (332146): Worst-case hold slack is 0.468
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.468               0.000 debounce_gpio_ck 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -25.305 debounce_gpio_ck 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.551
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.551              -7.169 debounce_gpio_ck 
+Info (332146): Worst-case hold slack is 0.204
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.204               0.000 debounce_gpio_ck 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -19.089 debounce_gpio_ck 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4761 megabytes
+    Info: Processing ended: Thu Mar 09 12:11:31 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

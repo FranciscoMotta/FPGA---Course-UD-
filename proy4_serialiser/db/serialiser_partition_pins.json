@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "serialiser_dout",
+					"strict" : false
+				},
+				{
+					"name" : "serialiser_shfen",
+					"strict" : false
+				},
+				{
+					"name" : "serialiser_Data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "serialiser_clock",
+					"strict" : false
+				},
+				{
+					"name" : "serialiser_reset",
+					"strict" : false
+				},
+				{
+					"name" : "serialiser_load",
+					"strict" : false
+				},
+				{
+					"name" : "serialiser_Data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "serialiser_Data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "serialiser_Data[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pwm_output",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_clock_in",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

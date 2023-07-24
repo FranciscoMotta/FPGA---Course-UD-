@@ -1,0 +1,19 @@
+-- Librerias 
+
+library ieee;
+
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+
+-- Entidad 
+
+entity servo_pwm is 
+	port
+	(
+		ser_pwm_clock_in	: 	in std_logic;								-- entrada de señal de reloj 50Mhz
+		ser_pwm_selec_an	: 	in std_logic_vector (1 downto 0); 	-- 1 for up and 0 for down
+		ser_pwm_disp_sig	: 	out std_logic_vector (6 downto 0);	-- Salida para los displays de 7 segmentos
+		ser_pwm_disp_ena	:	out std_logic_vector (3 downto 0); 	-- Salida para los enables del displays
+		ser_pwm_servo_sig	: 	out std_logic								-- Salida de la señal PWM para el servo
+	);
+end entity servo_pwm;

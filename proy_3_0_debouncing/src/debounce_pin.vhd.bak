@@ -1,0 +1,11 @@
+-- Librerías 
+
+library ieee;
+
+use ieee.std_logic_1164.all; -- op logicas y multinivel
+use ieee.std_logic_arith.all; -- op arith
+
+
+-- Entidad 
+
+entity 

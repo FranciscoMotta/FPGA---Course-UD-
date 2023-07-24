@@ -1,0 +1,41 @@
+-- Multiplex
+
+-- Librerias
+
+library ieee;
+
+-- Paquetes
+
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+-- Entidad
+
+entity multiplex is 
+port
+	(
+		entradas: in std_logic_vector (3 downto 0);
+		selector: in std_logic_vector(1 downto 0);
+		salida_mul: out std_logic
+	);
+end entity multiplex;
+
+-- Arquitecture
+
+architecture fn_multiplex of multiplex is
+begin
+	-- Procesos 
+	mi_proceso: process (entradas, selector)
+	begin
+		if selector = "00" then
+			salida_mul <= entradas(0);
+		elsif selector = "01" then
+			salida_mul <= entradas(1);
+		elsif selector <= "10" then 
+			salida_mul <= entradas(2);
+		else
+			salida_mul <= entradas(3);
+		end if;
+	end process mi_proceso;
+end architecture fn_multiplex;
