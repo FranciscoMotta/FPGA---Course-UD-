@@ -1,0 +1,18 @@
+|HeaterFSM
+fsm_clock => fsm_heater~reg0.CLK
+fsm_clock => fsm_r_led~reg0.CLK
+fsm_clock => fsm_g_led~reg0.CLK
+fsm_clock => FSM_state~4.DATAIN
+fsm_reset => fsm_heater~reg0.ACLR
+fsm_reset => fsm_r_led~reg0.ACLR
+fsm_reset => fsm_g_led~reg0.ACLR
+fsm_reset => FSM_state~6.DATAIN
+fsm_switch => FSM_state.OUTPUTSELECT
+fsm_switch => FSM_state.OUTPUTSELECT
+fsm_switch => FSM_state.OUTPUTSELECT
+fsm_tempe => ~NO_FANOUT~
+fsm_heater <= fsm_heater~reg0.DB_MAX_OUTPUT_PORT_TYPE
+fsm_r_led <= fsm_r_led~reg0.DB_MAX_OUTPUT_PORT_TYPE
+fsm_g_led <= fsm_g_led~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

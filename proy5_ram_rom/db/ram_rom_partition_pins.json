@@ -1,0 +1,157 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "memory_rdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[8]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[9]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[10]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[11]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[12]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[13]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[14]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_rdata[15]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wri_re",
+					"strict" : false
+				},
+				{
+					"name" : "memory_clock",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_addrs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_addrs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_addrs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[8]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[9]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[10]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[11]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[12]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[13]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[14]",
+					"strict" : false
+				},
+				{
+					"name" : "memory_wdata[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

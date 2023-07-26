@@ -1,0 +1,169 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "amemory_rdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_rdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_rdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_rdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_rdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_rdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_rdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_rdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_rdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_rdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_rdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_rdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_rdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_rdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_rdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_rdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_addrs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_addrs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_addrs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_addrs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_addrs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_addrs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_wdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_wr_re",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_wdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_wr_re",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_wdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_wdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_wdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_wdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_wdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_wdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_wdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_wdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_wdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_wdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_wdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_wdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bmemory_wdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "amemory_wdata[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

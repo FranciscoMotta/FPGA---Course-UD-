@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "fsm_heater",
+					"strict" : false
+				},
+				{
+					"name" : "fsm_r_led",
+					"strict" : false
+				},
+				{
+					"name" : "fsm_g_led",
+					"strict" : false
+				},
+				{
+					"name" : "fsm_clock",
+					"strict" : false
+				},
+				{
+					"name" : "fsm_reset",
+					"strict" : false
+				},
+				{
+					"name" : "fsm_switch",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

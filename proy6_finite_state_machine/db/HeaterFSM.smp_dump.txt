@@ -1,0 +1,6 @@
+
+State Machine - |HeaterFSM|FSM_state
+Name FSM_state.READY FSM_state.HEATING FSM_state.IDLE 
+FSM_state.IDLE 0 0 0 
+FSM_state.HEATING 0 1 1 
+FSM_state.READY 1 0 1 
